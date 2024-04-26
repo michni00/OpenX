@@ -36,7 +36,7 @@ Helm value file present in directory `Helm`, it was the only file after initiali
 
 4. Use a locust as a client for your app.
 
-Locustfile and Dockerfile necessary for the implementation are located in `locust` directory. I did not publish it on DockerHub and did not create a Helm chart out of it because it is hosted on a __NodePort__ as mentioned above so connecting to it and giving requests through another machine is sadly not possible (if I could publish it as a LoadBalancer I would do so) but there is an upside to it. When creating a comparison of performance there will be no ping or packet loss issue and the measurements should be precise compared to the cloud implementation.
+Locustfile and Dockerfile necessary for the implementation are located in `locust` directory. I did not publish it on DockerHub and did not create a Helm chart out of it because it is hosted on a __NodePort__ as mentioned above so connecting to it and giving requests through another machine is sadly not possible (if I could publish it as a LoadBalancer I would do so) but there is an upside to it. When creating a comparison of performance there will be no ping or packet loss issue and the measurements should be precise compared to the cloud implementation. I have created a Dockerfile though. If I had access to __LoadBalancer__ I would push an image created by the dockerfile to docker hub, put its repository in a Helm chart and deploy it in a Kubernetes environment. Some of the decisions made throughout this process have been described in the comparison PDF file in the `results` directory.  
 
 5. Build a continuous integration process (CI) for your project.
 
