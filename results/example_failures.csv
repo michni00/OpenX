@@ -1,0 +1,4 @@
+Method,Name,Error,Occurrences
+POST,/convert,RemoteDisconnected('Remote end closed connection without response'),2
+POST,/convert,"ConnectionResetError(104, 'Connection reset by peer')",1
+POST,/convert_ai,RemoteDisconnected('Remote end closed connection without response'),1
