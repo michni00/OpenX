@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: '<>', url: '<>']])
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'pytest tests/test.py/'
+            }
+        }
+    }
+}
